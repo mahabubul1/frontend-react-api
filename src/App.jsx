@@ -128,13 +128,24 @@ function App() {
       <Container>
         <Row>
           <Col className='shadow rounded'>
-              {currentTableData.length >0 ?
-                 <>
-                 <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Search" />
-                    <button onClick={resetTable}>Reset</button>
-                    <Table striped bordered hover>
-                      <thead className='cursor-pointer'>
-                        <tr>
+
+                <Col> 
+
+                   <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3 pt-2">
+                       <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Search" className='form-control' />
+                       <button onClick={resetTable}>Reset</button>
+                    </div>
+                                  
+                   
+                
+                 </Col>
+              
+
+                {currentTableData.length >0 ? 
+                  <> 
+                  <Table striped bordered hover>
+                      <thead>
+                        <tr className='cursor-pointer'>
                           <th onClick={() => handleSort('name')}>Name</th>
                           <th onClick={() => handleSort('email')}>Email</th>
                           <th onClick={() => handleSort('phone')}>Phone</th>
@@ -164,10 +175,12 @@ function App() {
                       pageSize={pageSize}
                       onPageChange={page => setCurrentPage(page)}
                     />
-                 </>
-                :
-                "Loding"
-              }
+                  </>
+                : "No found data"
+                
+                }
+                
+              
           </Col>
         </Row>
       </Container>

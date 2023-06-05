@@ -176,7 +176,7 @@ function App() {
                       onPageChange={page => setCurrentPage(page)}
                     />
                   </>
-                : "No found data"
+                : "Loading"
                 
                 }
                 

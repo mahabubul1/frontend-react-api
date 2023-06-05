@@ -1,4 +1,4 @@
-import React, { useEffect, useState,memo,useMemo } from 'react';
+import { useEffect, useState,memo,useMemo } from 'react';
 import { Table, Container , Row, Col } from 'react-bootstrap';
 import Pagination from './Pagination';
 import './App.css'
@@ -131,7 +131,7 @@ function App() {
 
                 <Col> 
 
-                   <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3 pt-2">
+                   <div className="d-grid gap-2 d-md-flex justify-content-md-end mb-3 pt-2">
                        <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Search" className='form-control' />
                        <button onClick={resetTable}>Reset</button>
                     </div>
@@ -189,4 +189,4 @@ function App() {
   )
 }
 
-export default memo(App)
+export default App

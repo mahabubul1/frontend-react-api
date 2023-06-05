@@ -1,4 +1,4 @@
-import { useEffect, useState,memo,useMemo } from 'react';
+import { useEffect, useState,useMemo } from 'react';
 import { Table, Container , Row, Col } from 'react-bootstrap';
 import Pagination from './Pagination';
 import './App.css'

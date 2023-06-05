@@ -26,7 +26,7 @@ function App() {
 
   const fetchUserData = async () => {
     try {
-      const response = await fetch('https://randomuser.me/api/?results=200');
+      const response = await fetch('https://randomuser.me/api/?results=5000');
       const data = await response.json();
       const flattenedData = data.results.map(user => ({
         name: `${user.name.title +'.'} ${user.name.first} ${user.name.last}`,
